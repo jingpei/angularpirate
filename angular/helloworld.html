@@ -1,0 +1,24 @@
+<html ng-app>
+<!--ng-app is a directive, so angular knows when to start angular - directs angular to perform a specific task-->
+<!--declarative statements, defines which areas of page are part of the app -->	
+<head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/angular.js"></script>
+
+</head>
+<!--creating a variable at initialization-->
+<body style="padding:50px;" ng-init="greeting = { greeter: 'Daniel', message: 'Hello World' }">
+<div class="alert alert-success">
+	<!--ng-model creates databinding-->
+	<!--mvc-separation of model (business logic), view (UI), controller (linking items)-->
+	<!--hello world auto in the input box when you load page-->
+	<!--if we change the input, then it updates the message in the <p> tag-->
+	<input ng-model="greeting.greeter">
+	<input ng-model="greeting.message">
+	<p>{{ greeting.greeter }} says {{ greeting.message }}.</p>
+	<!--filter is used with a pipe {{ messageText | uppercase }}-->
+</div>
+<!--angular evaluates whatever is in the mustache-->
+
+</body>
+</html>
