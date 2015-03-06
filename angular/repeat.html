@@ -13,16 +13,18 @@
     {name: 'firstmate1210', title: 'Pipe and First Mate', date: '2012-10-01', description: 'After a hard day of lootin\' and shootin\' I like to relax with my best mates and tally up the days booty.', imageurl: 'images/drunkenPirate_thumb1.png' }
     ]">
 
-<p><input ng-model="searchFor"></p>
+
 <div class="panel panel-default" ng-repeat="portfolio in portfolios | filter:searchFor" style="width:30%; float:left; margin-right: 2%;">
 	<div class="panel-heading">
-		<h3>{{ portfolio.title}} - {{ portfolio.date }}</h3>
+		<h3>{{ portfolio.title}}</h3>
+		<p>{{ portfolio.date }}</p>
 	</div>
 	<div class="panel-body">
 		<p>{{ portfolio.description }}</p>
 		<img src={{portfolio.imageurl}} style="width:100%;">
 	</div>
 </div>
+
 
 
 <!-- <ul>
@@ -38,7 +40,7 @@
 
 <!--can use like regular js in {{}}, so use length property of a js array below-->
 <p style="clear:both;">There are {{portfolios.length}} portfolios available.</p>
-
+<p><input ng-model="searchFor"></p>
 
 
 
